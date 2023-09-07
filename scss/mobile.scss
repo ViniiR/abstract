@@ -10,14 +10,15 @@
 }
 
 header {
-    height: 230px;
+    height: 300px;
+    position: relative;
     & > section:first-child {
         display: flex;
+        height: 40px;
         background-color: black;
         justify-content: space-between;
         padding: 10px;
         color: white;
-        height: 20%;
         section:first-child {
             width: 200px;
             display: flex;
@@ -70,7 +71,6 @@ header {
                     &:hover {
                         width: 30px;
                         height: 30px;
-                        fill: red;
                     }
                 }
             }
@@ -78,32 +78,55 @@ header {
     }
     & > section:last-child {
         background-color: rgba(119, 235, 255, 0.275);
-        height: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        h1 {
-            font-size: 2.3rem;
-            margin: 20px 0px;
-        }
-        input {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid black;
-            width: 80%;
+        align-items: center;
+        height: 240px;
+        section {
+            display: flex;
+            flex-direction: column;
+            height: 240px;
+            align-items: center;
+            justify-content: space-between;
+            height: 120px;
+            h1 {
+                font-size: 2.3rem;
+            }
+            input {
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid black;
+                width: 80%;
+            }
         }
     }
 }
 
 main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    //TODO: fix this bullshit u gotta re structure the whole html probably
     article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 150px;
+        background-color: green;
         section:first-child {
+            width: 100px;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
             img {
-
+                width: 60px;
             }
         }
         section:last-child {
+            width: 190px;
             h2 {
 
             }
