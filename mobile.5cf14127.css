@@ -133,6 +133,9 @@ main article section:last-child {
   width: 400px;
   height: 100%;
 }
+main article section:last-child h2 {
+  font-weight: 700;
+}
 main article section:last-child p:last-child a {
   text-decoration: none;
 }
@@ -142,6 +145,28 @@ main article section:last-child p:last-child a::after {
 }
 main article section:last-child p:last-child a:hover, main article section:last-child p:last-child a:hover * {
   text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  background-color: black;
+  justify-content: center;
+}
+footer * {
+  color: white;
+}
+footer section:not(section:last-child) {
+  width: 45vw;
+  background-color: blue;
+  height: 200px;
+}
+footer section:not(section:last-child) ul {
+  list-style: none;
+}
+footer section:not(section:last-child) ul li a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=/mobile.5cf14127.css.map */
