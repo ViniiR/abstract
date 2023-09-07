@@ -106,18 +106,17 @@ main {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    //TODO: fix this bullshit u gotta re structure the whole html probably
+    gap: 50px;
+    padding-top: 70px;
     article {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
-        height: 150px;
-        background-color: green;
+        height: 200px;
         section:first-child {
             width: 100px;
             height: 100%;
-            background-color: black;
             display: flex;
             align-items: flex-start;
             justify-content: center;
@@ -126,15 +125,30 @@ main {
             }
         }
         section:last-child {
-            width: 190px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 10px;
+            align-items: flex-start;
+            width: 400px;
+            height: 100%;
             h2 {
-
+                
             }
             p:first-child {
 
             }
             p:last-child {
-                
+                a {
+                    text-decoration: none;
+                    &::after {
+                        content: "→";
+                        padding-left: 10px;
+                    }
+                    &:hover, &:hover * {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
