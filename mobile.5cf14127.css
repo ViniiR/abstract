@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   margin: 0;
@@ -103,19 +104,19 @@ main {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  gap: 50px;
+  padding-top: 70px;
 }
 main article {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  height: 150px;
-  background-color: green;
+  height: 200px;
 }
 main article section:first-child {
   width: 100px;
   height: 100%;
-  background-color: black;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -124,7 +125,23 @@ main article section:first-child img {
   width: 60px;
 }
 main article section:last-child {
-  width: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  align-items: flex-start;
+  width: 400px;
+  height: 100%;
+}
+main article section:last-child p:last-child a {
+  text-decoration: none;
+}
+main article section:last-child p:last-child a::after {
+  content: "→";
+  padding-left: 10px;
+}
+main article section:last-child p:last-child a:hover, main article section:last-child p:last-child a:hover * {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=/mobile.5cf14127.css.map */
