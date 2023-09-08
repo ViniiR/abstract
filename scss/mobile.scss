@@ -163,12 +163,12 @@ footer {
     & * {
         color: white;
     }
-    section:not(section:last-child) {
+    & > section:not(section:last-child) {
         width: 45vw;
         background-color: blue;
         height: 200px;
         h2 {
-
+            margin-bottom: 10px;
         }
         ul {
             list-style: none;
@@ -178,5 +178,16 @@ footer {
                 }
             }
         }
+        section {
+            h3 {
+                margin-top: 20px;
+            }
+        }
+    }
+    & > section:last-child {
+        width: 45vw;
+        height: 120px;
+        background-color: blue;
+        margin-right: 45vw;
     }
 }

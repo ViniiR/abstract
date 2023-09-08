@@ -157,16 +157,28 @@ footer {
 footer * {
   color: white;
 }
-footer section:not(section:last-child) {
+footer > section:not(section:last-child) {
   width: 45vw;
   background-color: blue;
   height: 200px;
 }
-footer section:not(section:last-child) ul {
+footer > section:not(section:last-child) h2 {
+  margin-bottom: 10px;
+}
+footer > section:not(section:last-child) ul {
   list-style: none;
 }
-footer section:not(section:last-child) ul li a {
+footer > section:not(section:last-child) ul li a {
   text-decoration: none;
+}
+footer > section:not(section:last-child) section h3 {
+  margin-top: 20px;
+}
+footer > section:last-child {
+  width: 45vw;
+  height: 120px;
+  background-color: blue;
+  margin-right: 45vw;
 }
 
 /*# sourceMappingURL=/mobile.5cf14127.css.map */
