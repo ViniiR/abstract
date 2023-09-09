@@ -1,0 +1,34 @@
+html {
+  font-size: 20px;
+}
+
+header > section:first-child {
+  padding: 20px;
+}
+header > section:first-child section:first-child {
+  width: 50vw;
+}
+header > section:first-child section:first-child button {
+  width: 130px;
+}
+header > section:last-child section input {
+  width: 500px;
+}
+
+footer {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+footer > article > article {
+  height: 230px;
+  width: 50%;
+}
+footer > section {
+  display: flex;
+  align-items: end;
+}
+footer > section section:first-child {
+  width: 255px;
+}
+
+/*# sourceMappingURL=/tablet.52dea631.css.map */

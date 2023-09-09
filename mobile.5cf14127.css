@@ -97,7 +97,10 @@ header > section:last-child section input {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid black;
-  width: 80%;
+  width: 80vw;
+}
+header > section:last-child section input::placeholder {
+  font-size: 0.8rem;
 }
 
 main {
@@ -122,7 +125,7 @@ main article section:first-child {
   justify-content: center;
 }
 main article section:first-child img {
-  width: 60px;
+  width: 3.5rem;
 }
 main article section:last-child {
   display: flex;
@@ -148,37 +151,46 @@ main article section:last-child p:last-child a:hover, main article section:last-
 }
 
 footer {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 10px;
+  padding: 20px 10px 10px 20px;
   background-color: black;
-  justify-content: center;
 }
 footer * {
   color: white;
-}
-footer > section:not(section:last-child) {
-  width: 45vw;
-  background-color: blue;
-  height: 200px;
-}
-footer > section:not(section:last-child) h2 {
-  margin-bottom: 10px;
-}
-footer > section:not(section:last-child) ul {
-  list-style: none;
-}
-footer > section:not(section:last-child) ul li a {
   text-decoration: none;
 }
-footer > section:not(section:last-child) section h3 {
+footer a:hover {
+  text-decoration: underline;
+}
+footer article article {
+  display: flex;
+  flex-flow: row wrap;
+  width: 99%;
+}
+footer article article > section {
+  width: 50%;
+  height: 200px;
+}
+footer article article > section h2 {
+  margin-bottom: 10px;
+}
+footer article article > section ul {
+  list-style: none;
+}
+footer article article > section section h3 {
   margin-top: 20px;
 }
-footer > section:last-child {
-  width: 45vw;
+footer > section {
+  width: 90vw;
+  text-align: left;
   height: 120px;
-  background-color: blue;
   margin-right: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+footer > section section:last-child pre, footer > section section:last-child pre p {
+  white-space: pre-line;
 }
 
 /*# sourceMappingURL=/mobile.5cf14127.css.map */
