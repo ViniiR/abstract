@@ -1,0 +1,44 @@
+html {
+    font-size: 20px;
+}
+
+header {
+    & > section:first-child {
+        padding: 20px;
+        section:first-child {
+            width: 50vw;
+            button {
+                width: 130px;
+            }
+        }
+    }
+    & > section:last-child {
+        section {
+            input {
+                width: 500px;
+            }
+        }
+    }
+}
+
+main {
+    
+}
+
+footer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    & > article {
+        & > article {
+            height: 230px;
+            width: 50%;
+        }
+    }
+    & > section {
+        display: flex;
+        align-items: end;
+        section:first-child {
+            width: 255px;
+        }
+    }
+}

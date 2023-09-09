@@ -96,7 +96,10 @@ header {
                 padding: 10px;
                 border-radius: 5px;
                 border: 1px solid black;
-                width: 80%;
+                width: 80vw;
+                &::placeholder {
+                    font-size: .8rem;
+                }
             }
         }
     }
@@ -121,7 +124,7 @@ main {
             align-items: flex-start;
             justify-content: center;
             img {
-                width: 60px;
+                width: 3.5rem;
             }
         }
         section:last-child {
@@ -134,9 +137,6 @@ main {
             height: 100%;
             h2 {
                 font-weight: 700;
-            }
-            p:first-child {
-
             }
             p:last-child {
                 a {
@@ -155,39 +155,50 @@ main {
 }
 
 footer {
-    display: flex;
-    flex-flow: row  wrap;
-    padding: 10px;
+    padding: 20px 10px 10px 20px;
     background-color: black;
-    justify-content: center;
     & * {
         color: white;
+        text-decoration: none;
     }
-    & > section:not(section:last-child) {
-        width: 45vw;
-        background-color: blue;
-        height: 200px;
-        h2 {
-            margin-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            li {
-                a {
-                    text-decoration: none;
+    & a:hover {
+        text-decoration: underline;
+    }
+    article {
+        article {
+            display: flex;
+            flex-flow: row wrap;
+            width: 99%;
+            & > section {
+                width: 50%;
+                height: 200px;
+                h2 {
+                    margin-bottom: 10px;
+                }
+                ul {
+                    list-style: none;
+                }
+                section {
+                    h3 {
+                        margin-top: 20px;
+                    }
                 }
             }
         }
-        section {
-            h3 {
-                margin-top: 20px;
+    }
+    & > section {
+        width: 90vw;
+        text-align: left;
+        height: 120px;
+        margin-right: 45vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20px;
+        section:last-child {
+            pre, pre p {
+                white-space: pre-line;
             }
         }
-    }
-    & > section:last-child {
-        width: 45vw;
-        height: 120px;
-        background-color: blue;
-        margin-right: 45vw;
     }
 }
