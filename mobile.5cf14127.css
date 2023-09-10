@@ -106,28 +106,33 @@ header > section:last-child section input::placeholder {
 main {
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  align-items: center;
   gap: 50px;
   padding-top: 70px;
 }
-main article {
+main > section {
+  width: 80%;
+  height: 700px;
+}
+main > section article {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  height: 200px;
+  height: 220px;
 }
-main article section:first-child {
+main > section article section:first-child {
   width: 100px;
   height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
-main article section:first-child img {
+main > section article section:first-child img {
   width: 3.5rem;
 }
-main article section:last-child {
+main > section article section:last-child {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -136,17 +141,17 @@ main article section:last-child {
   width: 400px;
   height: 100%;
 }
-main article section:last-child h2 {
+main > section article section:last-child h2 {
   font-weight: 700;
 }
-main article section:last-child p:last-child a {
+main > section article section:last-child p:last-child a {
   text-decoration: none;
 }
-main article section:last-child p:last-child a::after {
+main > section article section:last-child p:last-child a::after {
   content: "→";
   padding-left: 10px;
 }
-main article section:last-child p:last-child a:hover, main article section:last-child p:last-child a:hover * {
+main > section article section:last-child p:last-child a:hover, main > section article section:last-child p:last-child a:hover * {
   text-decoration: underline;
 }
 

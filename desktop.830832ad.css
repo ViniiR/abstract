@@ -1,0 +1,31 @@
+html {
+  font-size: 30px;
+}
+
+header > section:first-child section:first-child button {
+  width: 180px;
+}
+header > section:last-child {
+  height: 400px;
+}
+header > section:last-child section {
+  height: 200px;
+}
+header > section:last-child section input {
+  padding: 30px 20px 20px 20px;
+  width: 700px;
+}
+
+main {
+  height: 1500px;
+  padding-top: 220px;
+}
+main section article {
+  height: 400px;
+}
+
+footer {
+  height: 8%;
+}
+
+/*# sourceMappingURL=/desktop.830832ad.css.map */
