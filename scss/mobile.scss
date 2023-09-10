@@ -108,45 +108,50 @@ header {
 main {
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    align-items: center;
     gap: 50px;
     padding-top: 70px;
-    article {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        height: 200px;
-        section:first-child {
-            width: 100px;
-            height: 100%;
+    & > section {
+        width: 80%;
+        height: 700px;
+        article {
             display: flex;
-            align-items: flex-start;
             justify-content: center;
-            img {
-                width: 3.5rem;
-            }
-        }
-        section:last-child {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
+            align-items: center;
             gap: 10px;
-            align-items: flex-start;
-            width: 400px;
-            height: 100%;
-            h2 {
-                font-weight: 700;
+            height: 220px;
+            section:first-child {
+                width: 100px;
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                img {
+                    width: 3.5rem;
+                }
             }
-            p:last-child {
-                a {
-                    text-decoration: none;
-                    &::after {
-                        content: "→";
-                        padding-left: 10px;
-                    }
-                    &:hover, &:hover * {
-                        text-decoration: underline;
+            section:last-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 10px;
+                align-items: flex-start;
+                width: 400px;
+                height: 100%;
+                h2 {
+                    font-weight: 700;
+                }
+                p:last-child {
+                    a {
+                        text-decoration: none;
+                        &::after {
+                            content: "→";
+                            padding-left: 10px;
+                        }
+                        &:hover, &:hover * {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }

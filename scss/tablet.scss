@@ -4,11 +4,26 @@ html {
 
 header {
     & > section:first-child {
-        padding: 20px;
+        padding: 30px;
         section:first-child {
             width: 50vw;
             button {
                 width: 130px;
+            }
+        }
+        section:last-child {
+            width: 80px;
+            button {
+                &:first-child {
+                    height: 30px;
+                    width: 30px;
+                }
+                &:last-child {
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
             }
         }
     }
@@ -22,7 +37,14 @@ header {
 }
 
 main {
-    
+    height: 1000px;
+    & > section {
+        width: 40%;
+        height: 1000px;
+        article {
+            height: 300px;
+        }
+    }
 }
 
 footer {

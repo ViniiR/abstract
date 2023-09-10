@@ -1,0 +1,40 @@
+html {
+    font-size: 30px;
+}
+
+header {
+    & > section:first-child {
+        section:first-child {
+            button {
+                width: 180px;
+            }
+        }
+        section:last-child {
+
+        }
+    }
+    & > section:last-child {
+        height: 400px;
+        section {
+            height: 200px;
+            input {
+                padding: 30px 20px 20px 20px;
+                width: 700px;
+            }
+        }
+    }
+}
+
+main {
+    height: 1500px;
+    padding-top: 220px;
+    & section {
+        article {
+            height: 400px;
+        }
+    }
+}
+
+footer {
+    height: 8%;
+}

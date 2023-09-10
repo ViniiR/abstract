@@ -3,7 +3,7 @@ html {
 }
 
 header > section:first-child {
-  padding: 20px;
+  padding: 30px;
 }
 header > section:first-child section:first-child {
   width: 50vw;
@@ -11,8 +11,30 @@ header > section:first-child section:first-child {
 header > section:first-child section:first-child button {
   width: 130px;
 }
+header > section:first-child section:last-child {
+  width: 80px;
+}
+header > section:first-child section:last-child button:first-child {
+  height: 30px;
+  width: 30px;
+}
+header > section:first-child section:last-child button:last-child svg {
+  width: 40px;
+  height: 40px;
+}
 header > section:last-child section input {
   width: 500px;
+}
+
+main {
+  height: 1000px;
+}
+main > section {
+  width: 40%;
+  height: 1000px;
+}
+main > section article {
+  height: 300px;
 }
 
 footer {
