@@ -98,6 +98,7 @@ header > section:last-child section input {
   border-radius: 5px;
   border: 1px solid black;
   width: 80vw;
+  font-size: 0.8rem;
 }
 header > section:last-child section input::placeholder {
   font-size: 0.8rem;
