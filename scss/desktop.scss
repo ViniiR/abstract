@@ -10,7 +10,7 @@ header {
             }
         }
         section:last-child {
-
+            
         }
     }
     & > section:last-child {
@@ -26,8 +26,8 @@ header {
 }
 
 main {
-    height: 1500px;
-    padding-top: 220px;
+    height: 1400px;
+    padding-top: 250px;
     & section {
         article {
             height: 400px;
@@ -36,5 +36,32 @@ main {
 }
 
 footer {
-    height: 8%;
+    height: 600px;
+    & * {
+        font-size: 30px;
+    }
+    & > article {
+        width: max-content;
+        height: 340px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        & > article {
+            width: 50%;
+            justify-content: space-around;
+        }
+    }
+    & > section {
+        bottom: 0;
+        left: 10px;
+        height: 200px;
+        width: 98%;
+        section:first-child {
+            width: 380px;
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
 }

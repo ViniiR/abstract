@@ -17,15 +17,42 @@ header > section:last-child section input {
 }
 
 main {
-  height: 1500px;
-  padding-top: 220px;
+  height: 1400px;
+  padding-top: 250px;
 }
 main section article {
   height: 400px;
 }
 
 footer {
-  height: 8%;
+  height: 600px;
+}
+footer * {
+  font-size: 30px;
+}
+footer > article {
+  width: max-content;
+  height: 340px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+footer > article > article {
+  width: 50%;
+  justify-content: space-around;
+}
+footer > section {
+  bottom: 0;
+  left: 10px;
+  height: 200px;
+  width: 98%;
+}
+footer > section section:first-child {
+  width: 380px;
+}
+footer > section section:first-child svg {
+  width: 40px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=/desktop.830832ad.css.map */
