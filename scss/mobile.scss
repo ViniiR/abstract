@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+$topheight: 40px;
+$toppadding: 10px;
+$inputpadding: 10px;
+
 * {
     margin: 0;
     padding: 0;
@@ -14,10 +18,10 @@ header {
     position: relative;
     & > section:first-child {
         display: flex;
-        height: 40px;
+        height: $topheight;
         background-color: black;
         justify-content: space-between;
-        padding: 10px;
+        padding: $toppadding;
         color: white;
         section:first-child {
             width: 200px;
@@ -62,12 +66,73 @@ header {
             justify-content: space-between;
             background-color: transparent;
             button {
+                cursor: pointer;
                 background-color: transparent;
                 border: none;
                 &:first-child {
                     transition: width .1s,height .1s;
                     width: 24px;
                     height: 24px;
+                    aside {
+                        background-color: white;
+                        position: absolute;
+                        z-index: 99;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        height: calc($topheight + ($toppadding * 2));
+                        display: none;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        align-items: center;
+                        input[type=text] {
+                            width: 75%;
+                            height: 20px;
+                            padding: $inputpadding;
+                            border-radius: 5px;
+                        }
+                        div {
+                            width: 20px;
+                            cursor: pointer;
+                            height: 20px;
+                            color: whites;
+                            background-color: transparent;
+                            padding: 10px;
+                            border: none;
+                            position: relative;
+                            display: flex;
+                            flex-flow: column;
+                            justify-content: center;
+                            align-items: center;
+                            &:hover {
+                                & > span {
+                                    height: 6px;
+                                    width: 27px;
+                                    &:first-child {
+                                        transform: rotate(45deg) translateY(4.5px);
+                                    }
+                                    &:last-child {
+                                        transform: rotate(-45deg) translateY(-4.5px);
+                                    }
+                                }
+                            }
+                            span {
+                                background-color: black;
+                                width: 20px;
+                                color: wheat;
+                                height: 5px;
+                                display: inline-block;
+                                border-radius: 5px;
+                                transition: height linear .1s, width linear .1s;
+                                &:first-child {
+                                    transform: rotate(45deg) translateY(4px);
+                                }
+                                &:last-child {
+                                    transform: rotate(-45deg) translateY(-4px);
+                                }
+                            }
+                        }
+                    }
                     &:hover {
                         width: 30px;
                         height: 30px;
@@ -93,7 +158,7 @@ header {
                 font-size: 2.3rem;
             }
             input {
-                padding: 10px;
+                padding: $inputpadding;
                 border-radius: 5px;
                 border: 1px solid black;
                 width: 80vw;

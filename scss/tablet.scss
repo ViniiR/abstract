@@ -2,9 +2,12 @@ html {
     font-size: 20px;
 }
 
+$toppadding: 30px;
+$topheight: 40px;
+
 header {
     & > section:first-child {
-        padding: 30px;
+        padding: $toppadding;
         section:first-child {
             width: 50vw;
             button {
@@ -17,6 +20,9 @@ header {
                 &:first-child {
                     height: 30px;
                     width: 30px;
+                    aside {
+                        height: calc($topheight + ($toppadding * 2));
+                    }
                 }
                 &:last-child {
                     svg {
