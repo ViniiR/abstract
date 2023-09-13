@@ -30,6 +30,7 @@ header {
             button {
                 height: 40px;
                 border: none;
+                cursor: pointer;
                 background-color: transparent;
                 color: inherit;
                 font-weight: bold;
@@ -157,15 +158,39 @@ header {
             h1 {
                 font-size: 2.3rem;
             }
+            &:has(input:hover) {
+                & > input {
+                    border-color: rgb(67, 67, 247);
+                }
+                & > svg {
+                    fill: rgb(67, 67, 247);
+                }
+            }
+            &:has(svg:hover) {
+                & > svg {
+                    fill: rgb(67, 67, 247);
+                }
+            }
             input {
                 padding: $inputpadding;
                 border-radius: 5px;
                 border: 1px solid black;
                 width: 80vw;
+                height: 20px;
                 font-size: .8rem;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.052);
+                position: relative;
+                transition: border-color .5s;
                 &::placeholder {
                     font-size: .8rem;
                 }
+            }
+            svg {
+                position: absolute;
+                right: 10%;
+                top: 207px;
+                fill: black;
+                transition: border-color .5s;
             }
         }
     }
