@@ -12,12 +12,12 @@ header > section:last-child section {
   height: 200px;
 }
 header > section:last-child section input {
-  padding: 30px 20px 20px 20px;
+  padding: 20px;
   width: 900px;
 }
 
 main {
-  height: 1400px;
+  height: 1450px;
   padding-top: 250px;
 }
 main section article {
@@ -25,7 +25,7 @@ main section article {
 }
 
 footer {
-  height: 600px;
+  position: relative;
 }
 footer * {
   font-size: 30px;
@@ -42,8 +42,6 @@ footer > article > article {
   justify-content: space-around;
 }
 footer > section {
-  bottom: 0;
-  left: 10px;
   height: 200px;
   width: 98%;
 }

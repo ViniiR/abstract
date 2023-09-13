@@ -63,6 +63,7 @@ header > section:first-child section:last-child {
   background-color: transparent;
 }
 header > section:first-child section:last-child button {
+  cursor: pointer;
   background-color: transparent;
   border: none;
 }
@@ -70,6 +71,64 @@ header > section:first-child section:last-child button:first-child {
   transition: width 0.1s, height 0.1s;
   width: 24px;
   height: 24px;
+}
+header > section:first-child section:last-child button:first-child aside {
+  background-color: white;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 60px;
+  display: none;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+header > section:first-child section:last-child button:first-child aside input[type=text] {
+  width: 75%;
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+header > section:first-child section:last-child button:first-child aside div {
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+  color: whites;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+header > section:first-child section:last-child button:first-child aside div:hover > span {
+  height: 6px;
+  width: 27px;
+}
+header > section:first-child section:last-child button:first-child aside div:hover > span:first-child {
+  transform: rotate(45deg) translateY(4.5px);
+}
+header > section:first-child section:last-child button:first-child aside div:hover > span:last-child {
+  transform: rotate(-45deg) translateY(-4.5px);
+}
+header > section:first-child section:last-child button:first-child aside div span {
+  background-color: black;
+  width: 20px;
+  color: wheat;
+  height: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: height linear 0.1s, width linear 0.1s;
+}
+header > section:first-child section:last-child button:first-child aside div span:first-child {
+  transform: rotate(45deg) translateY(4px);
+}
+header > section:first-child section:last-child button:first-child aside div span:last-child {
+  transform: rotate(-45deg) translateY(-4px);
 }
 header > section:first-child section:last-child button:first-child:hover {
   width: 30px;

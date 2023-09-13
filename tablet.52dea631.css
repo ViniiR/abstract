@@ -18,6 +18,9 @@ header > section:first-child section:last-child button:first-child {
   height: 30px;
   width: 30px;
 }
+header > section:first-child section:last-child button:first-child aside {
+  height: 100px;
+}
 header > section:first-child section:last-child button:last-child svg {
   width: 40px;
   height: 40px;
