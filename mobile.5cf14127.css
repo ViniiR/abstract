@@ -162,24 +162,32 @@ header > section:last-child section:has(input:hover) > svg {
 header > section:last-child section:has(svg:hover) > svg {
   fill: rgb(67, 67, 247);
 }
-header > section:last-child section input {
+header > section:last-child section article {
+  width: 90vw;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header > section:last-child section article input {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid black;
-  width: 80vw;
   height: 20px;
+  width: 90%;
   font-size: 0.8rem;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.052);
   position: relative;
   transition: border-color 0.5s;
 }
-header > section:last-child section input::placeholder {
+header > section:last-child section article input::placeholder {
   font-size: 0.8rem;
 }
-header > section:last-child section svg {
+header > section:last-child section article svg {
   position: absolute;
-  right: 10%;
-  top: 207px;
+  right: 20px;
   fill: black;
   transition: border-color 0.5s;
 }

@@ -25,8 +25,14 @@ header > section:first-child section:last-child button:last-child svg {
   width: 40px;
   height: 40px;
 }
-header > section:last-child section input {
+header > section:last-child section article {
+  width: 600px;
+}
+header > section:last-child section article input {
   width: 500px;
+}
+header > section:last-child section article svg {
+  right: 50px;
 }
 
 main {
