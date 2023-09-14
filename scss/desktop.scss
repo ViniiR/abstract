@@ -14,9 +14,15 @@ header {
         height: 400px;
         section {
             height: 200px;
-            input {
-                padding: 20px;
-                width: 900px;
+            article {
+                width: 800px;
+                input {
+                    padding: 20px;
+                    width: 900px;
+                }
+                svg {
+                    right: 30px;
+                }
             }
         }
     }

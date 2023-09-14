@@ -11,9 +11,15 @@ header > section:last-child {
 header > section:last-child section {
   height: 200px;
 }
-header > section:last-child section input {
+header > section:last-child section article {
+  width: 800px;
+}
+header > section:last-child section article input {
   padding: 20px;
   width: 900px;
+}
+header > section:last-child section article svg {
+  right: 30px;
 }
 
 main {

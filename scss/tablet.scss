@@ -35,8 +35,14 @@ header {
     }
     & > section:last-child {
         section {
-            input {
-                width: 500px;
+            article {
+                width: 600px;
+                input {
+                    width: 500px;
+                }
+                svg {
+                    right: 50px;
+                }
             }
         }
     }

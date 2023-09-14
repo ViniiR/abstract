@@ -171,26 +171,34 @@ header {
                     fill: rgb(67, 67, 247);
                 }
             }
-            input {
-                padding: $inputpadding;
-                border-radius: 5px;
-                border: 1px solid black;
-                width: 80vw;
-                height: 20px;
-                font-size: .8rem;
-                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.052);
+            article {
+                width: 90vw;
+                height: max-content;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
                 position: relative;
-                transition: border-color .5s;
-                &::placeholder {
+                input {
+                    padding: $inputpadding;
+                    border-radius: 5px;
+                    border: 1px solid black;
+                    height: 20px;
+                    width: 90%;
                     font-size: .8rem;
+                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.052);
+                    position: relative;
+                    transition: border-color .5s;
+                    &::placeholder {
+                        font-size: .8rem;
+                    }
                 }
-            }
-            svg {
-                position: absolute;
-                right: 10%;
-                top: 207px;
-                fill: black;
-                transition: border-color .5s;
+                svg {
+                    position: absolute;
+                    right: 20px;
+                    fill: black;
+                    transition: border-color .5s;
+                }
             }
         }
     }
