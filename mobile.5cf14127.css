@@ -135,6 +135,69 @@ header > section:first-child section:last-child button:first-child:hover {
   width: 30px;
   height: 30px;
 }
+header > section:first-child section:last-child > article {
+  width: 25px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+header > section:first-child section:last-child > article input {
+  appearance: none;
+}
+header > section:first-child section:last-child > article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header > section:first-child section:last-child > article::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+header > section:first-child section:last-child > article input, header > section:first-child section:last-child > article::before, header > section:first-child section:last-child > article::after {
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background-color: white;
+}
+header > section:first-child section:last-child > aside#aside-menu:last-child {
+  background-color: rgb(44, 44, 44);
+  border-top: 1px solid gray;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 60px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+header > section:first-child section:last-child > aside#aside-menu:last-child hr {
+  width: 50%;
+  margin: 15px 0px 10px 0px;
+  background-color: gray;
+  border: none;
+  height: 1px;
+}
+header > section:first-child section:last-child > aside#aside-menu:last-child p {
+  height: 25px;
+}
+header > section:first-child section:last-child > aside#aside-menu:last-child p:hover a {
+  color: rgb(156, 156, 156);
+}
+header > section:first-child section:last-child > aside#aside-menu:last-child p a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color ease 0.3s;
+}
 header > section:last-child {
   background-color: rgba(119, 235, 255, 0.275);
   display: flex;
@@ -153,15 +216,6 @@ header > section:last-child section {
 header > section:last-child section h1 {
   font-size: 2.3rem;
 }
-header > section:last-child section:has(input:hover) > input {
-  border-color: rgb(67, 67, 247);
-}
-header > section:last-child section:has(input:hover) > svg {
-  fill: rgb(67, 67, 247);
-}
-header > section:last-child section:has(svg:hover) > svg {
-  fill: rgb(67, 67, 247);
-}
 header > section:last-child section article {
   width: 90vw;
   height: max-content;
@@ -170,6 +224,15 @@ header > section:last-child section article {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+header > section:last-child section article:has(input:hover) > input {
+  border-color: rgb(67, 67, 247);
+}
+header > section:last-child section article:has(input:hover) > svg {
+  fill: rgb(67, 67, 247);
+}
+header > section:last-child section article:has(svg:hover) > svg {
+  fill: rgb(67, 67, 247);
 }
 header > section:last-child section article input {
   padding: 10px;
@@ -187,9 +250,9 @@ header > section:last-child section article input::placeholder {
 }
 header > section:last-child section article svg {
   position: absolute;
-  right: 20px;
+  right: 25px;
   fill: black;
-  transition: border-color 0.5s;
+  transition: fill 0.5s;
 }
 
 main {
