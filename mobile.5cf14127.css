@@ -70,8 +70,21 @@ header > section:first-child section:last-child button {
 }
 header > section:first-child section:last-child button:first-child {
   transition: width 0.1s, height 0.1s;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+}
+header > section:first-child section:last-child button:first-child svg:first-child {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: relative;
+  height: 100%;
+  transition: width linear 0.1s, height linear 0.1s, transform linear 0.1s;
+}
+header > section:first-child section:last-child button:first-child:hover svg:first-child {
+  width: 110%;
+  height: 110%;
+  transform: translate(-1px, -1px);
 }
 header > section:first-child section:last-child button:first-child aside {
   background-color: white;
@@ -131,12 +144,9 @@ header > section:first-child section:last-child button:first-child aside div spa
 header > section:first-child section:last-child button:first-child aside div span:last-child {
   transform: rotate(-45deg) translateY(-4px);
 }
-header > section:first-child section:last-child button:first-child:hover {
-  width: 30px;
-  height: 30px;
-}
 header > section:first-child section:last-child > article {
   width: 25px;
+  cursor: pointer;
   height: 20px;
   position: relative;
   display: flex;
@@ -146,6 +156,7 @@ header > section:first-child section:last-child > article {
 }
 header > section:first-child section:last-child > article input {
   appearance: none;
+  pointer-events: none;
 }
 header > section:first-child section:last-child > article::before {
   content: "";
