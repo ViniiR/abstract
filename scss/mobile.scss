@@ -140,6 +140,74 @@ header {
                     }
                 }
             }
+            & > article {
+                width: 25px;
+                height: 20px;
+                position: relative;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                input {
+                    appearance: none;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+                input, &::before, &::after {
+                    width: 100%;
+                    height: 4px;
+                    border-radius: 5px;
+                    background-color: white;
+                }
+                &:has(input#hamburguer-menu-button:checked) {
+                    //TODO: the damn input x transformation
+                }
+            }
+            & > aside#aside-menu:last-child {
+                background-color: rgb(44, 44, 44);
+                border-top: 1px solid gray;
+                width: 100%;
+                height: 150px;
+                position: absolute;
+                z-index: 999;
+                left: 0;
+                top: 60px;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                hr {
+                    width: 50%;
+                    margin: 15px 0px 10px 0px;
+                    background-color: gray;
+                    border: none;
+                    height: 1px;
+                }
+                p {
+                    height: 25px;
+                    &:hover {
+                        a {
+                            color: rgb(156, 156, 156);
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 1.2rem;
+                        transition: color ease .3s;
+                    }
+                }
+            }
         }
     }
     & > section:last-child {
@@ -158,19 +226,6 @@ header {
             h1 {
                 font-size: 2.3rem;
             }
-            &:has(input:hover) {
-                & > input {
-                    border-color: rgb(67, 67, 247);
-                }
-                & > svg {
-                    fill: rgb(67, 67, 247);
-                }
-            }
-            &:has(svg:hover) {
-                & > svg {
-                    fill: rgb(67, 67, 247);
-                }
-            }
             article {
                 width: 90vw;
                 height: max-content;
@@ -179,6 +234,19 @@ header {
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                &:has(input:hover) {
+                    & > input {
+                        border-color: rgb(67, 67, 247);
+                    }
+                    & > svg {
+                        fill: rgb(67, 67, 247);
+                    }
+                }
+                &:has(svg:hover) {
+                    & > svg {
+                        fill: rgb(67, 67, 247);
+                    }
+                }
                 input {
                     padding: $inputpadding;
                     border-radius: 5px;
@@ -195,9 +263,9 @@ header {
                 }
                 svg {
                     position: absolute;
-                    right: 20px;
+                    right: 25px;
                     fill: black;
-                    transition: border-color .5s;
+                    transition: fill .5s;
                 }
             }
         }
