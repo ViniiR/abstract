@@ -72,8 +72,23 @@ header {
                 border: none;
                 &:first-child {
                     transition: width .1s,height .1s;
-                    width: 24px;
-                    height: 24px;
+                    width: 30px;
+                    height: 30px;
+                    svg:first-child {
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        position: relative;
+                        height: 100%;
+                        transition: width linear .1s, height linear .1s, transform linear .1s;
+                    }
+                    &:hover {
+                        svg:first-child {
+                            width: 110%;
+                            height: 110%;
+                            transform: translate(-1px, -1px);
+                        }
+                    }
                     aside {
                         background-color: white;
                         position: absolute;
@@ -134,14 +149,11 @@ header {
                             }
                         }
                     }
-                    &:hover {
-                        width: 30px;
-                        height: 30px;
-                    }
                 }
             }
             & > article {
                 width: 25px;
+                cursor: pointer;
                 height: 20px;
                 position: relative;
                 display: flex;
@@ -150,6 +162,7 @@ header {
                 align-items: center;
                 input {
                     appearance: none;
+                    pointer-events: none;
                 }
                 &::before {
                     content: "";
@@ -168,9 +181,6 @@ header {
                     height: 4px;
                     border-radius: 5px;
                     background-color: white;
-                }
-                &:has(input#hamburguer-menu-button:checked) {
-                    //TODO: the damn input x transformation
                 }
             }
             & > aside#aside-menu:last-child {
