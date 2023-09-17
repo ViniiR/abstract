@@ -9,6 +9,11 @@ header {
                 width: 180px;
             }
         }
+        section:last-child {
+            & > aside#aside-menu:last-child {
+                height: 200px;
+            }
+        }
     }
     & > section:last-child {
         height: 400px;

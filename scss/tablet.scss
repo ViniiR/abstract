@@ -16,6 +16,9 @@ header {
         }
         section:last-child {
             width: 80px;
+            & > aside#aside-menu:last-child {
+                top: calc($topheight + ($toppadding * 2));
+            }
             button {
                 &:first-child {
                     height: 30px;

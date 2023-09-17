@@ -14,6 +14,9 @@ header > section:first-child section:first-child button {
 header > section:first-child section:last-child {
   width: 80px;
 }
+header > section:first-child section:last-child > aside#aside-menu:last-child {
+  top: 100px;
+}
 header > section:first-child section:last-child button:first-child {
   height: 30px;
   width: 30px;

@@ -154,9 +154,12 @@ header > section:first-child section:last-child > article {
   justify-content: center;
   align-items: center;
 }
-header > section:first-child section:last-child > article input {
+header > section:first-child section:last-child > article input#hamburguer-menu-button {
   appearance: none;
   pointer-events: none;
+}
+header > section:first-child section:last-child > article::before, header > section:first-child section:last-child > article::after {
+  transition: top linear 0.1s, bottom linear 0.1s;
 }
 header > section:first-child section:last-child > article::before {
   content: "";
@@ -176,6 +179,17 @@ header > section:first-child section:last-child > article input, header > sectio
   border-radius: 5px;
   background-color: white;
 }
+header > section:first-child section:last-child > article:has(input#hamburguer-menu-button:checked)::before {
+  transform: rotate(-45deg);
+  top: 7px;
+}
+header > section:first-child section:last-child > article:has(input#hamburguer-menu-button:checked) > input {
+  display: none;
+}
+header > section:first-child section:last-child > article:has(input#hamburguer-menu-button:checked)::after {
+  bottom: 9px;
+  transform: rotate(45deg);
+}
 header > section:first-child section:last-child > aside#aside-menu:last-child {
   background-color: rgb(44, 44, 44);
   border-top: 1px solid gray;
@@ -185,7 +199,7 @@ header > section:first-child section:last-child > aside#aside-menu:last-child {
   z-index: 999;
   left: 0;
   top: 60px;
-  display: flex;
+  display: none;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
@@ -261,7 +275,7 @@ header > section:last-child section article input::placeholder {
 }
 header > section:last-child section article svg {
   position: absolute;
-  right: 25px;
+  right: 5%;
   fill: black;
   transition: fill 0.5s;
 }

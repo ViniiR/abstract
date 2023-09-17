@@ -160,9 +160,12 @@ header {
                 flex-flow: column wrap;
                 justify-content: center;
                 align-items: center;
-                input {
+                input#hamburguer-menu-button {
                     appearance: none;
                     pointer-events: none;
+                }
+                &::before, &::after {
+                    transition: top linear .1s, bottom linear .1s;
                 }
                 &::before {
                     content: "";
@@ -182,6 +185,19 @@ header {
                     border-radius: 5px;
                     background-color: white;
                 }
+                &:has(input#hamburguer-menu-button:checked) {
+                    &::before {
+                        transform: rotate(-45deg);
+                        top: 7px;
+                    }
+                    & > input {
+                        display: none;
+                    }
+                    &::after {
+                        bottom: 9px;
+                        transform: rotate(45deg);
+                    }
+                }
             }
             & > aside#aside-menu:last-child {
                 background-color: rgb(44, 44, 44);
@@ -191,8 +207,8 @@ header {
                 position: absolute;
                 z-index: 999;
                 left: 0;
-                top: 60px;
-                display: flex;
+                top: calc($topheight + ($toppadding * 2));
+                display: none;
                 flex-flow: column wrap;
                 justify-content: center;
                 align-items: center;
@@ -273,7 +289,7 @@ header {
                 }
                 svg {
                     position: absolute;
-                    right: 25px;
+                    right: 5%;
                     fill: black;
                     transition: fill .5s;
                 }
